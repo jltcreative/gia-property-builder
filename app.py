@@ -846,7 +846,7 @@ with tab_generate:
                 continue
             prop = next((p for p in st.session_state.properties if p.get("official_website_url") == url), {})
             title_display = gen.get("title", prop.get("property_name", url))
-with st.expander(f"📝 {title_display}", expanded=False):
+            with st.expander(f"📝 {title_display}", expanded=False):
                 for key, val in gen.items():
                     if key == "error":
                         continue
